@@ -29,6 +29,8 @@ run tests
 
 ### Unit Tests
 
+[![CMake CI](https://github.com/orestephen/libregmap/actions/workflows/ci.yml/badge.svg)](https://github.com/orestephen/libregmap/actions/workflows/ci.yml)
+
  - test_api_read: ensure read api are functioning
  - test_api_write: ensure write api are functioning
  - test_api_update_bits: ensure update bits api are functioning
