@@ -17,6 +17,10 @@ extern "C" {
 #define REGMAP_ACCESS_WRITE 2
 #define REGMAP_ACCESS_FULL 3
 
+/* handled proper casting and de-referencing inside the read/write callbacks */
+#define REGMAP_READ_WORD(val, reg) (*(uint32_t*)val = (uint32_t)(reg))
+#define REGMAP_WRITE_WORD(val, reg) ((reg) = *(uint32_t*)val)
+
 struct regmap_struct {
   uint16_t address;
   uint8_t access;

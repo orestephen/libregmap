@@ -7,12 +7,12 @@
 static uint8_t array[ARRAY_SIZE];
 
 static int32_t array_u16_read(uint32_t addr, void* val) {
-  *(uint32_t*)val = (uint32_t)(((uint16_t*)array)[addr]);
+  REGMAP_READ_WORD(val, ((uint16_t*)array)[addr]);
   return REGMAP_OK;
 }
 
 static int32_t array_u16_write(uint32_t addr, void* val) {
-  ((uint16_t*)array)[addr] = *(uint16_t*)val;
+  REGMAP_WRITE_WORD(val, ((uint16_t*)array)[addr]);
   return REGMAP_OK;
 }
 

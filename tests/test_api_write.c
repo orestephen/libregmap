@@ -8,7 +8,7 @@
 static uint8_t array[ARRAY_SIZE];
 
 static int32_t array_u8_write(uint32_t addr, void* val) {
-  ((uint8_t*)array)[addr] = *(uint8_t*)val;
+  REGMAP_WRITE_WORD(val, ((uint8_t*)array)[addr]);
   return REGMAP_OK;
 }
 
