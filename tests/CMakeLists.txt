@@ -19,3 +19,7 @@ add_test(test_u8_array test_u8_array)
 add_executable(test_u16_array test_u16_array.c)
 target_link_libraries(test_u16_array libregmap)
 add_test(test_u16_array test_u16_array)
+
+add_executable(test_access test_u16_array.c)
+target_link_libraries(test_access libregmap)
+add_test(test_access test_access)
