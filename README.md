@@ -1,8 +1,10 @@
 # libregmap
 
-A simple regmap library
+A simple regmap library that provides a unified API to either registers or bus.
 
-Library is intended to be used on small applications.
+Library is intended to be used on small applications. Master or slave devices.
+
+Patches are welcome. Please contribute and enjoy!
 
 ## Config
 
